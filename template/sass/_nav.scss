@@ -1,0 +1,205 @@
+.nav {
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    background-color: #fff;
+    z-index: 5;
+
+    & > .container {
+        padding: 5rem 7.5rem 1.5rem 7.5rem;
+        display: flex;
+        justify-content: space-between;
+    
+        & > .logo > a {
+            font-size: 2.25rem;
+            font-weight: 700;
+            width: max-content;
+            text-decoration: none;
+            color: inherit;
+    
+            &:after {
+                content: "";
+                display: block;
+                height: 0.688rem;
+                width: 100%;
+                margin-top: 0.2rem;
+                background-color: $primary-color;
+            }
+        }
+
+        & > .nav-trigger {
+            display: none;
+            justify-content: center;
+            align-items: center;
+
+            & > a#nav-trigger-btn {
+                content: url('../img/bars.svg');
+                width: 2rem;
+                height: 2.75rem;
+                color: #000;
+            }
+        }
+    
+        & > .nav-wrapper {
+            display: flex;
+            align-items: center;
+
+            & > .nav-links {
+                display: flex;
+                flex-direction: row;
+                height: 100%;
+        
+                & > .nav-item {
+                    display: flex;
+                    align-items: center;
+                    margin-right: 3.5rem;
+                    height: 100%;
+        
+                    &:last-child {
+                        margin-right: 0;
+                    }
+        
+                    & > a {
+                        color: inherit;
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                        text-decoration: none;
+                    }
+        
+                    &.drop-down > a {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+        
+                        &:after {
+                            content: url('../img/arrow_down.svg');
+                            display: flex;
+                            align-items: center;
+                            width: 1.25rem;
+                            height: 0.75rem;
+                            margin-left: 0.563rem;
+                            color: #000;
+                            transition: transform .2s ease-out;
+                        }
+                    }
+        
+                    &.drop-down {
+                        position: relative;
+        
+                        .menu {
+                            top: 2.5rem;
+                            position: absolute;
+                            display: block;
+                            padding: 2.5rem 2.125rem;
+                            background-color: #fff;
+                            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                            border-radius: 20px;
+                            transition: transform .2s linear, opacity .2s linear;
+                            visibility: hidden;
+                            opacity: 0;
+                            
+                            transform: translateY(1rem);
+                            z-index: 9;
+        
+                            & > .item {
+                                margin-bottom: 1.25rem;
+        
+                                &:last-child {
+                                    margin-bottom: 0;
+                                }
+        
+                                & > a {
+                                    font-size: 1.25rem;
+                                    font-weight: 400;
+                                    white-space: nowrap;
+                                    text-decoration: none;
+                                    color: inherit;
+                                }
+                            }
+                        }
+                    }
+        
+                    &.drop-down:hover > .menu {
+                        visibility: visible;
+                        opacity: 1;
+                        transform: translateY(0rem);
+                    }
+        
+                    &.drop-down:hover > a:after {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .nav > .container {
+        padding: 5rem 6.25rem 1.5rem 6.25rem;
+        flex-wrap: wrap;
+
+        & > .nav-trigger {
+            display: flex;
+        }
+
+        & .nav-wrapper {
+            display: none;
+            width: 100%;
+
+            & > .nav-links {
+                flex-direction: column;
+                align-items: center;
+                height: max-content;
+                width: 100%;
+                margin: 3rem 0;
+                
+                & > .nav-item {
+                    margin-right: 0;
+                    align-items: center;
+                    margin-bottom: 1.875rem;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    & > a {
+                        font-size: 2rem;
+                    }
+
+                    &.drop-down > a:after {
+                        display: none;
+                    }
+
+                    &.drop-down:hover > .menu {
+                        visibility: hidden;
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+
+        &.opened {
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+            & > .nav-trigger > a#nav-trigger-btn {
+                content: url('../img/cross.svg');
+            }
+
+            & .nav-wrapper {
+                display: flex;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .nav > .container {
+        padding: 1.875rem 1.125rem 1.125rem 1.125rem;
+
+        & .nav-wrapper > .nav-links > .nav-item > a {
+            font-size: 1.5rem;
+        }
+    }
+}

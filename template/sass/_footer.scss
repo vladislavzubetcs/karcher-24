@@ -1,0 +1,181 @@
+@keyframes Pulse {
+    0% {
+        transform: scale(1);
+    }
+    10% {
+       transform: scale(130%);
+    }
+    20% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(130%);
+    }
+    40% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+ } 
+
+.footer {
+    padding: 7.7rem 7.5rem 0 7.5rem;
+    background-color: #222222;
+
+    & > .content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        & > .footer-main {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+
+            & > .logo {
+                width: max-content;
+                margin-bottom: 1.75rem;
+    
+                & > a {
+                    font-size: 3rem;
+                    font-weight: 700;
+                    text-decoration: none;
+                    color: #fff;
+            
+                    &:after {
+                        content: "";
+                        display: block;
+                        height: 0.688rem;
+                        width: 100%;
+                        margin-top: 0.2rem;
+                        background-color: $primary-color;
+                    }
+                }
+            }
+
+            & > .content {
+                color: #454545;
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.21rem;
+            }
+        }
+        
+    
+        & > .footer-blocks {
+            width: 55%;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            & > .single-block {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 2.125rem;
+                width: 50%;
+        
+                &:last-child {
+                    margin-bottom: 0;
+                }
+        
+                & > .block-header {
+                    color: #fff;
+                    margin-bottom: 0.75rem;
+                    font-weight: 500;
+                    font-size: 1.5rem;
+                }
+        
+                & > .block-content {
+                    color: #fff;
+                    font-size: 1.25rem;
+                    line-height: 1.513rem;
+                    font-weight: 400;
+                    display: flex;
+                    flex-direction: column;
+        
+                    & > a {
+                        color: inherit;
+                        text-decoration: none;
+                        padding: 0.1rem 0;
+
+                        &.email {
+                            line-height: 1.5rem;
+                            text-decoration: underline;
+                        }
+                    }
+
+                    & > a.pb-1 {
+                        padding-bottom: 1rem;
+                    }
+
+                    & > a.contact-with-icon {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+
+                        & > img {
+                            margin-right: 0.5rem;
+                            width: 1.25rem;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+    & > .copy {
+        display: flex;
+        justify-content: space-between;
+        padding: 5rem 0 2.125rem 0;
+
+        & > .copy-main, & > .copy-additional {
+            display: flex;
+            align-items: center;
+        }
+
+        & > .copy-main, & > .copy-additional > a {
+            color: #454545;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        & > .copy-additional > a {
+            text-decoration: none;
+
+            & > span {
+                display: inline-block;
+                color: red;
+                animation: infinite 2.5s Pulse;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .footer {
+        padding: 7.7rem 6.25rem 0 6.25rem;
+
+        & > .content {
+            & > .footer-main {
+                width: 100%;
+            }
+            & > .footer-blocks {
+                margin-top: 5rem;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .footer {
+        padding: 7.7rem 1.125rem 0 1.125rem;
+
+        & > .content > .footer-blocks > .single-block {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,163 @@
+.contact_us {
+    height: 100%;
+    width: 100%;
+    background-image: url('../img/contact_us.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+
+    & > .container {
+        padding: 10rem 0;
+        background-color: rgba(34, 34, 34, 0.6);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    
+        & > h1 {
+            text-align: center;
+            color: #fff;
+        }
+
+        & > form {
+            padding-top: 1.438rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            & > .primary-button {
+                margin: 2.5rem 0;
+            }
+
+            & > .form-group {
+                display: flex;
+                flex-direction: column;
+                padding: 1rem 0;
+
+                & > label {
+                    margin-bottom: 0.375rem;
+                    color: #fff;
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                }
+
+                & > input[type="text"], & > input[type="tel"] {
+                    background: #FFFFFF;
+                    border-radius: 30px;
+                    border: none;
+                    outline: none;
+                    width: 27.5rem;
+                    padding: 1.563rem 1rem;
+
+                    &::placeholder {
+                        font-size: 1.5rem;
+                        color: $descriptor-color;
+                        font-weight: 300;
+                    }
+                }
+            }
+
+            & > .form-group.checkbox {
+                position: relative;
+                cursor: pointer;
+                font-size: 1.125rem;
+                color: #fff;
+                font-weight: 400;
+                user-select: none;
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: row;
+                align-items: center;
+                height: 100%;
+
+                & > a {
+                    display: contents;
+                    width: max-content;
+                    color: $primary-color;
+                }
+
+                & > input[type="checkbox"] {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                    height: 0;
+                    width: 0;
+
+                    &:checked ~ .checkmark {
+                        box-sizing: border-box;
+                        border: 2px solid #000;
+                        background-color: #fff;
+                    }
+
+                    &:checked ~ .checkmark:after {
+                        transform: rotate(45deg);
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+
+                & > .checkmark {
+                    top: 0.5rem;
+                    left: 0rem;
+                    height: 1.875rem;
+                    min-width: 1.875rem;
+                    background-color: #eee;
+                    border-radius: 5px;
+                    order: -1;
+                    margin-right: 0.5rem;
+
+                    &:after {
+                        content: "";
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 1rem;
+                        width: .6rem;
+                        margin-left: 0.42rem;
+                        border: solid #000;
+                        border-width: 0 2px 2px 0;
+                        transform: rotate(10deg);
+                        transition: transform .3s ease-out;
+                        visibility: hidden;
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .contact_us {
+        & > .container {
+            padding: 4rem 0;
+            & > form {
+                width: calc(100% - 2.250rem);
+                padding: 1rem 1.125rem;
+                margin: 0;
+
+                & > .form-group {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 1rem 0;
+
+                    & > input[type="text"], & > input[type="tel"] {
+                        width: calc(100% - 2rem);
+
+                        &::placeholder {
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+
+                & > .form-group.checkbox {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

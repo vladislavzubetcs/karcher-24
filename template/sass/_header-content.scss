@@ -1,0 +1,137 @@
+@keyframes fadeInRight {
+    0% {
+       opacity: 0;
+       transform: translateX(7rem);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+ } 
+
+.header {
+    padding: 17.438rem 7.5rem 6rem 7.5rem;
+
+    & > .container {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        & > .info, > .slider {
+            display: flex;
+            width: 50%;
+        }
+    
+        & > .info {
+            z-index: 2;
+            flex-direction: column;
+            padding-top: 4rem;
+    
+            & > h1 {
+                line-height: 4.841rem;
+    
+                & > span {
+                    display: inline-block;
+                    width: max-content;
+    
+                    &:after {
+                        content: "";
+                        display: block;
+                        height: 0.938rem;
+                        width: 100%;
+                        background-color: $primary-color;
+                    }
+                }
+            }
+    
+            & > p {
+                font-size: 1.375rem;
+                line-height: 1.664rem;
+                margin-top: 1.875rem;
+                margin-bottom: 3.125rem;
+            }
+        }
+    
+        & > .slider {
+            z-index: 1;
+            height: 38.375rem;
+            justify-content: flex-end;
+            align-items: center;
+    
+            & > .slider-item {
+                display: none;
+                height: 100%;
+    
+                &.active {
+                    display: block;
+                    animation: .5s linear fadeInRight;
+                }
+    
+                & > img {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1290px) {
+    .header {
+        & > .container {
+            & > .info {
+                width: 60%;
+            }
+        
+            & > .slider {
+                width: 40%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .header {
+        padding: 17.438rem 6.25rem 6rem 6.25rem;
+
+        & > .container {
+            justify-content: center;
+            height: 100%;
+
+            & > .info {
+                padding-top: 3rem;
+                width: 100%;
+
+                & > p {
+                    margin: 6.25rem 0;
+                }
+
+                & > .primary-button {
+                    margin: 0 auto;
+                }
+            }
+        
+            & > .slider {
+                display: none;
+            }
+        }
+        
+    }
+}
+
+@media (max-width: 992px) {
+    .header {
+        padding: 10rem 1.125rem 6rem 1.125rem;
+
+        & > .container > .info {
+
+            & > h1 {
+                line-height: 2.723rem;
+            }
+
+            & > p {
+                margin-top: 2.5rem;
+                margin-bottom: 4rem;
+            }
+        }
+    }
+}
