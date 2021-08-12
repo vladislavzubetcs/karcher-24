@@ -7,9 +7,9 @@ class Db
         $paramsPath = ROOT . '/config/db_params.php';
         $params = array(
             'host' => 'localhost',
-            'dbname' => 'kostukovichi',
+            'dbname' => 'karcherb_main',
             'user' => 'root',
-            'password' => '',
+            'password' => 'WxR^WV30WijK',
         );
 
         $dsn = "mysql:host={$params['host']};dbname={$params['dbname']}";
