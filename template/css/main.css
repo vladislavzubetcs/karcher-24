@@ -723,9 +723,12 @@ h2 {
             justify-content: center;
     height: 100%;
   }
-  .header > .container > .info > .header-title {
+  .header > .container > .info {
     padding-top: 3rem;
     width: 100%;
+  }
+  .header > .container > .info > .header-title > h1 {
+    line-height: 2.723rem;
   }
   .header > .container > .info > .header-title > p {
     margin: 6.25rem 0;

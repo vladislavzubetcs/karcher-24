@@ -131,16 +131,22 @@
             justify-content: center;
             height: 100%;
 
-            & > .info > .header-title {
+            & > .info {
                 padding-top: 3rem;
                 width: 100%;
 
-                & > p {
-                    margin: 6.25rem 0;
-                }
-
-                & > .primary-button {
-                    margin: 0 auto;
+                & > .header-title {
+                    & > h1 {
+                        line-height: 2.723rem;
+                    }
+    
+                    & > p {
+                        margin: 6.25rem 0;
+                    }
+    
+                    & > .primary-button {
+                        margin: 0 auto;
+                    }
                 }
             }
         
