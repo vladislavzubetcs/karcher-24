@@ -44,3 +44,29 @@ $('.checkbox-policy').click(function() {
     else
         $('.checkbox.policy input:checkbox').prop('checked', false);
 });
+
+$('#sendContactUs').submit(function(e) {
+    e.preventDefault();
+    $.ajax({
+        type: "POST",
+        url: '/sendcontactus',
+        data: $(this).serialize(),
+        success: function(data)
+        {
+            alert(data);
+        }
+    });
+});
+
+$('#sendProblem').submit(function(e) {
+    e.preventDefault();
+    $.ajax({
+        type: "POST",
+        url: '/sendproblem',
+        data: $(this).serialize(),
+        success: function(data)
+        {
+            alert(data);
+        }
+    });
+});

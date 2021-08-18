@@ -11,7 +11,8 @@
         <h1 data-aos="fade-right">Ремонт <?=$technique_item['name']?> <span>Karcher</span></h1>
 
         <div class="content">
-            <form class="form" method="POST" action="">
+            <form class="form" method="POST" id="sendProblem">
+                <input type="text" name="technique" value="<?=$technique_item['name']?>" hidden>
 
                 <?php if(is_array($technique_item['problems']) && count($technique_item['problems']) > 0):?>
                     <p>Опишите вашу проблему:</p>

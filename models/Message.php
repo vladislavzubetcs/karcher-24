@@ -19,7 +19,7 @@ class Message
 
     public static function problem($name, $phone, $technique, $problems)
     {
-        $to  = "email <email>"; 
+        $to  = "vladislavzubetcs@gmail.com <vladislavzubetcs@gmail.com>"; 
         
         $subject = "Обращение с сайта от {$name}";
 
@@ -36,8 +36,8 @@ class Message
         $message = "{$name} оставил(а) заявку на сайте на ремонт <b>{$technique}</b> со следующими проблемами:<br/>{$problems_string}<br/>Указанный телефон для связи: <b>{$phone}</b>";
         
         $headers  = "Content-type: text/html; charset=utf-8\r\n";
-        $headers .= "From: {$name} <email>\r\n";
-        $headers .= "Reply-To: email\r\n";
+        $headers .= "From: {$name} <vladislavzubetcs@gmail.com>\r\n";
+        $headers .= "Reply-To: vladislavzubetcs@gmail.com\r\n";
 
         return mail($to, $subject, $message, $headers);
     }

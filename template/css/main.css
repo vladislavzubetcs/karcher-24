@@ -972,6 +972,8 @@ h2 {
   }
   .repair > h1 {
     line-height: 2.723rem;
+    word-break: break-all;
+    word-wrap: break-word;
   }
   .repair > .content {
     margin-top: 4rem;

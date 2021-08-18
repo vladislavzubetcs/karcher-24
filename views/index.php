@@ -98,7 +98,7 @@
         <div class="container">
             <h1 data-aos="flip-left">Оформление заявки</h1>
 
-            <form class="form" method="POST">
+            <form class="form" method="POST" id="sendContactUs">
                 <div class="form-group" data-aos="zoom-in">
                     <label for="name">Имя</label>
                     <input type="text" name="name" id="name" placeholder="Введите ваше имя" required>

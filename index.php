@@ -24,4 +24,7 @@ Router::route('/technique/delete/(\w+)', [TechniqueController::class, 'delete'])
 Router::route('/login', [UserController::class, 'auth']);
 Router::route('/exit', [UserController::class, 'exit']);
 
+Router::route('/sendcontactus', [MessageController::class, 'sendContactUs']);
+Router::route('/sendproblem', [MessageController::class, 'sendProblem']);
+
 Router::execute($_SERVER['REQUEST_URI']);
