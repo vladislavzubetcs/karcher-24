@@ -131,7 +131,7 @@
             justify-content: center;
             height: 100%;
 
-            & > .info {
+            & > .info > .header-title {
                 padding-top: 3rem;
                 width: 100%;
 
@@ -156,7 +156,7 @@
     .header {
         padding: 10rem 1.125rem 6rem 1.125rem;
 
-        & > .container > .info {
+        & > .container > .info > .header-title {
 
             & > h1 {
                 line-height: 2.723rem;

@@ -11,6 +11,7 @@
                             <img src="/uploads/<?=$item['image']?>">
                         </div>
                         <p><?=$item['name']?></p>
+                        <span>Перейти</span>
                     </div>
                 </a>
             <?php endforeach;?>

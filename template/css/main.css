@@ -723,14 +723,14 @@ h2 {
             justify-content: center;
     height: 100%;
   }
-  .header > .container > .info {
+  .header > .container > .info > .header-title {
     padding-top: 3rem;
     width: 100%;
   }
-  .header > .container > .info > p {
+  .header > .container > .info > .header-title > p {
     margin: 6.25rem 0;
   }
-  .header > .container > .info > .primary-button {
+  .header > .container > .info > .header-title > .primary-button {
     margin: 0 auto;
   }
   .header > .container > .slider {
@@ -742,10 +742,10 @@ h2 {
   .header {
     padding: 10rem 1.125rem 6rem 1.125rem;
   }
-  .header > .container > .info > h1 {
+  .header > .container > .info > .header-title > h1 {
     line-height: 2.723rem;
   }
-  .header > .container > .info > p {
+  .header > .container > .info > .header-title > p {
     margin-top: 2.5rem;
     margin-bottom: 4rem;
   }
@@ -925,6 +925,14 @@ h2 {
   word-break: normal;
 }
 
+.repair > .content > a .single-block > span {
+  font-size: 1.2rem;
+  color: #8A8A8A;
+  font-weight: 300;
+  padding-top: 1rem;
+  text-transform: uppercase;
+}
+
 .repair > .content > a.admin {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -973,6 +981,9 @@ h2 {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 100%;
             flex: 1 0 100%;
+  }
+  .repair > .content > a > .single-block > span {
+    font-size: 0.8rem;
   }
 }
 
@@ -1834,8 +1845,8 @@ h2 {
   outline: none;
   padding: 1.563rem 1rem;
   font-size: 1.5rem;
-  max-width: 100%;
-  min-width: 20rem;
+  max-width: calc(100% - 2rem - 2px);
+  min-width: 10rem;
   min-height: 6rem;
   width: 80%;
 }

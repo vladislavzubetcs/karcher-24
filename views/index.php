@@ -51,6 +51,7 @@
                             <img src="/uploads/<?=$item['image']?>">
                         </div>
                         <p><?=$item['name']?></p>
+                        <span>Перейти</span>
                     </div>
                 </a>
             <?php endforeach;?>
@@ -72,19 +73,19 @@
         <h1>Почему выбирают нас?</h1>
 
         <div class="content">
-            <div class="single-block" data-aos="fade-down-right">
+            <div class="single-block" data-aos="flip-up">
                 <div class="icon">
                     <img src="/template/img/zoom.svg">
                 </div>
                 <p>Бесплатная диагностика</p>
             </div>
-            <div class="single-block" data-aos="fade-up">
+            <div class="single-block" data-aos="flip-up">
                 <div class="icon">
                     <img src="/template/img/shield.svg">
                 </div>
                 <p>Гарантия от 6 месяцев</p>
             </div>
-            <div class="single-block" data-aos="fade-down-left">
+            <div class="single-block" data-aos="flip-up">
                 <div class="icon">
                     <img src="/template/img/time_big.svg">
                 </div>

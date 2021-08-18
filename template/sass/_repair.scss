@@ -57,6 +57,14 @@
                     width: 18.75rem;
                     word-break: normal;
                 }
+
+                & > span {
+                    font-size: 1.2rem;
+                    color: $descriptor-color;
+                    font-weight: 300;
+                    padding-top: 1rem;
+                    text-transform: uppercase;
+                }
             }
             &.admin {
                 display: flex;
@@ -102,6 +110,10 @@
             & > a > .single-block {
                 margin-bottom: 4rem;
                 flex: 1 0 100%;
+
+                & > span {
+                    font-size: 0.8rem;
+                }
             }
         }
     }
