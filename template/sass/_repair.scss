@@ -26,18 +26,17 @@
     & > .content {
         margin-top: 7.5rem;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         flex-direction: row;
         flex-wrap: wrap;
 
         & > a {
             text-decoration: none;
             color: inherit;
-            width: auto;
+            flex: 1 0 33.3%;
 
             .single-block {
                 display: flex;
-                flex: 1 0 33.3%;
                 flex-direction: column;
                 align-items: center;
                 margin-bottom: 10rem;

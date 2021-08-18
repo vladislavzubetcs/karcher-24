@@ -4,15 +4,15 @@ class Message
 {
     public static function contactUs($name, $phone)
     {
-        $to  = "email <email>"; 
+        $to  = "vladislavzubetcs@gmail.com <vladislavzubetcs@gmail.com>"; 
         
         $subject = "Обращение с сайта от {$name}";
 
         $message = "{$name} оставил(а) заявку на сайте на обратный звонок.<br/><br/>Указанный телефон для связи: <b>{$phone}</b>";
         
         $headers  = "Content-type: text/html; charset=utf-8\r\n";
-        $headers .= "From: {$name} <email>\r\n";
-        $headers .= "Reply-To: email\r\n";
+        $headers .= "From: {$name} <vladislavzubetcs@gmail.com>\r\n";
+        $headers .= "Reply-To: vladislavzubetcs@gmail.com\r\n";
 
         return mail($to, $subject, $message, $headers);
     }

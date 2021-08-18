@@ -110,7 +110,7 @@
                 <button type="submit" class="primary-button" data-aos="zoom-in">Отправить</button>
 
                 <label class="form-group checkbox policy" data-aos="zoom-in">Заполняя форму, <a class="modal-open-btn" modal-id="policy" href="#">соглашаюсь</a> на обработку персональных данных.
-                    <input type="checkbox" name="accept" class="checkbox-policy">
+                    <input type="checkbox" name="accept" class="checkbox-policy" required>
                     <span class="checkmark"></span>
                 </label>
             </form>
