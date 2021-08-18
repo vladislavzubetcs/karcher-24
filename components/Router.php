@@ -24,6 +24,13 @@ class Router
             }
         }
 
-        return call_user_func_array([IndexController::class, 'pageNotFound'], array());
+        return self::pageNotFound();
+    }
+
+    public static function pageNotFound() {
+        $technique = Technique::getRelated();
+        
+        require_once(ROOT . '/views/404.php');
+        return true;
     }
 }

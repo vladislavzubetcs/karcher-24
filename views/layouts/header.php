@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="ВЦ Белкоопсоюза">
+    <meta name="author" content="Vladislav Zubetcs & Polina Shimanovich">
     <meta name="description" content="Karcher-24 Беларусь">
 
     <title>Karcher-24 Беларусь</title>
@@ -25,7 +25,7 @@
         <div class="container">
 
             <div class="logo">
-                <a href="#">Karcher-24</a>
+                <a href="/">Karcher-24</a>
             </div>
             
             <div class="nav-trigger">
@@ -35,36 +35,28 @@
             <div class="nav-wrapper">
                 <ul class="nav-links">
                     <li class="nav-item">
-                        <a href="#">Главная</a>
+                        <a href="/">Главная</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#">О компании</a>
+                        <a href="/about">О компании</a>
                     </li>
     
-                    <li class="nav-item drop-down">
-                        <a href="#">Ремонт</a>
+                    <li class="nav-item <?php if(is_array($technique) && count($technique) > 0) echo 'drop-down';?>">
+                        <a href="/technique">Ремонт</a>
     
-                        <ul class="menu">
-                            <li class="item">
-                                <a href="#">Пылесосы</a>
-                            </li>
-                            <li class="item">
-                                <a href="#">Поломоечные машины</a>
-                            </li>
-                            <li class="item">
-                                <a href="#">Парогенераторы</a>
-                            </li>
-                            <li class="item">
-                                <a href="#">Автомойки</a>
-                            </li>
-                            <li class="item">
-                                <a href="#">Подметальные машины</a>
-                            </li>
-                        </ul>
+                        <?php if(is_array($technique) && count($technique) > 0):?>
+                            <ul class="menu">
+                                <?php foreach($technique as $item):?>
+                                    <li class="item">
+                                        <a href="/technique/<?=$item['slug']?>"><?=$item['name']?></a>
+                                    </li>
+                                <?php endforeach;?>
+                            </ul>
+                        <?php endif;?>
                     </li>
     
                     <li class="nav-item">
-                        <a href="#">Контакты</a>
+                        <a href="#contacts" class="scroller" scroll-href=".contacts">Контакты</a>
                     </li>
                 </ul>
             </div>

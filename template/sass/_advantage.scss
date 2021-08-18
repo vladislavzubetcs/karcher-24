@@ -1,0 +1,67 @@
+.advantage {
+    padding: 10rem 0 15rem 0;
+    & > h1 {
+        display: flex;
+        justify-content: center;
+    }
+
+    & > .content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 6.75rem 8rem;
+
+        & > .single-block {
+            display: flex;
+            flex: 1 0 33.3%;
+            flex-direction: column;
+            align-items: center;
+
+            & > .icon {
+                display: block;
+                width: 9.75rem;
+                height: 9.75rem;
+                background-color: $primary-color;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            & > p {
+                text-align: center;
+                padding: 1.563rem 3rem;
+                line-height: 2.269rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .advantage {
+        padding: 4rem 0 8rem 0;
+
+        & > .content {
+            margin: 6.75rem 0;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .advantage {
+        padding: 2rem 1.125rem;
+
+        & > h1 {
+            text-align: center;
+        }
+
+        & > .content > .single-block {
+            flex: 1 0 100%;
+            margin-bottom: 3rem;
+    
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

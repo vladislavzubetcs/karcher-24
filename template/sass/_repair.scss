@@ -1,6 +1,10 @@
 .repair {
     padding: 5rem 7.5rem;
 
+    &.repair-page {
+        padding: 15rem 7.5rem 0rem 7.5rem;
+    }
+
     & > h1 {
         max-width: 60rem;
         line-height: 4.236rem;
@@ -26,36 +30,57 @@
         flex-direction: row;
         flex-wrap: wrap;
 
-        & > .single-block {
-            display: flex;
-            flex: 1 0 33.3%;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 10rem;
-            width: 100%;
+        & > a {
+            text-decoration: none;
+            color: inherit;
+            width: auto;
 
-            & > .image {
-                max-width: 21.75rem;
-                max-height: 21.75rem;
-
-                & > img {
-                    width: 100%;
+            .single-block {
+                display: flex;
+                flex: 1 0 33.3%;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 10rem;
+                width: 100%;
+    
+                & > .image {
+                    max-width: 21.75rem;
+                    max-height: 21.75rem;
+    
+                    & > img {
+                        width: 100%;
+                    }
+                }
+    
+                & > p {
+                    line-height: 2.269rem;
+                    text-align: center;
+                    width: 18.75rem;
+                    word-break: normal;
                 }
             }
-
-            & > p {
-                line-height: 2.269rem;
-                text-align: center;
-                width: 18.75rem;
-                word-break: break-all;
+            &.admin {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                & > .single-block > .image {
+                    width: 5rem;
+                    height: 5rem;
+                    padding: 3rem;
+                }
             }
-        }
+        } 
     }
 }
 
 @media (max-width: 1200px) {
     .repair {
         padding: 5rem 6.25rem;
+
+        &.repair-page {
+            padding: 15rem 6.25rem 0 6.25rem;
+        }
     }
 }
 
@@ -63,14 +88,19 @@
     .repair {
         padding: 5rem 1.125rem;
 
+        &.repair-page {
+            padding: 10rem 1.125rem 0 1.125rem;
+        }
+
         & > h1 {
             line-height: 2.723rem;
         }
 
         & > .content {
             margin-top: 4rem;
+            justify-content: center;
 
-            & > .single-block {
+            & > a > .single-block {
                 margin-bottom: 4rem;
                 flex: 1 0 100%;
             }

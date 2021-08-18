@@ -1,66 +1,170 @@
 .about {
-    padding: 10rem 0 15rem 0;
+    padding: 15rem 0 6rem 0;
+
     & > h1 {
-        display: flex;
-        justify-content: center;
+        line-height: 4.841rem;
+        padding: 0 7.5rem;
+
+        & > span {
+            display: inline-block;
+            width: max-content;
+
+            &:after {
+                content: "";
+                display: block;
+                height: 0.938rem;
+                width: 100%;
+                background-color: $primary-color;
+            }
+        }
     }
 
     & > .content {
+        margin-top: 9rem;
         display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        margin: 6.75rem 8rem;
+        flex-direction: column;
 
         & > .single-block {
             display: flex;
-            flex: 1 0 33.3%;
-            flex-direction: column;
-            align-items: center;
+            flex-direction: row;
+            height: 29rem;
+            margin-bottom: 10rem;
 
-            & > .icon {
-                display: block;
-                width: 9.75rem;
-                height: 9.75rem;
-                background-color: $primary-color;
-                border-radius: 50%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &.align-left {
+                padding-left: 7.5rem;
+
+                & > p {
+                    padding-right: 3rem;
+                }
+            }
+
+            &.align-right {
+                padding-right: 7.5rem;
+
+                & > p {
+                    padding-left: 3rem;
+                }
             }
 
             & > p {
-                text-align: center;
-                padding: 1.563rem 3rem;
-                line-height: 2.269rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 45%;
             }
+
+            & > .image {
+                width: 55%;
+                overflow: hidden;
+
+                & > img {
+                    height: 100%;
+                    transition: transform .25s ease-in-out;
+
+                    &:hover {
+                        transform: scale(110%);
+                    }
+                }
+            }
+
         }
     }
 }
 
+
 @media (max-width: 1200px) {
     .about {
-        padding: 4rem 0 8rem 0;
+        padding: 15rem 0 11rem 0;
+
+        & > h1 {
+            padding: 0 6.25rem;
+        }
 
         & > .content {
-            margin: 6.75rem 0;
+            margin-top: 9rem;
+            display: flex;
+            flex-direction: column;
+    
+            & > .single-block {
+                flex-direction: column;
+                height: max-content;
+                width: 100%;
+    
+                &.align-left {
+                    padding-left: 0rem;
+    
+                    & > p {
+                        padding: 0;
+                        padding-top: 10rem;
+                    }
+                }
+
+                &.align-right {
+                    padding-right: 0;
+    
+                    & > p {
+                        padding: 0;
+                        padding-top: 10rem;
+                    }
+                }
+
+                & > p {
+                    margin: 0 auto;
+                    width: 70%;
+                    text-align: center;
+                }
+    
+                & > .image {
+                    order: -1;
+                    width: 100%;
+                    height: 25rem;
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    & > img {
+                        height: auto;
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
 }
 
 @media (max-width: 992px) {
     .about {
-        padding: 2rem 1.125rem;
+        padding: 10rem 0 6rem 0;
 
         & > h1 {
-            text-align: center;
+            line-height: 2.723rem;
+            padding: 0 1.125rem;
         }
 
-        & > .content > .single-block {
-            flex: 1 0 100%;
-            margin-bottom: 3rem;
-    
-            &:last-child {
-                margin-bottom: 0;
+        & > .content {
+            margin-top: 4rem;
+
+            & > .single-block {
+                margin-bottom: 3rem;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                &.align-left > p {
+                    padding-top: 4rem;
+                }
+
+                &.align-right > p {
+                    padding-top: 4rem;
+                }
+
+                
             }
         }
     }
