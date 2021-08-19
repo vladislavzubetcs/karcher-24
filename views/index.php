@@ -4,9 +4,9 @@
         <div class="container">
             <div class="info" data-aos="fade-right">
                 <div class="header-contacts">
-                    <a href="tel:+375447883083">+375 (44) 788-30-83</a>
-                    <a href="tg:+375447883083" class="contact-with-icon"><img src="/template/img/telegram.svg"> Связь с нами в Telegram</a>
-                    <a href="viber://chat?number=375447883083" class="contact-with-icon"><img src="/template/img/viber.svg"> Связь с нами в Viber</a>
+                    <a href="tel:+375293551000">+375 29 355 1000</a>
+                    <a href="tg:+375293551000" class="contact-with-icon"><img src="/template/img/telegram.svg"> Связь с нами в Telegram</a>
+                    <a href="viber://chat?number=375293551000" class="contact-with-icon"><img src="/template/img/viber.svg"> Связь с нами в Viber</a>
                 </div>
                 <div class="header-title">
                     <h1>Ремонт техники <span>Karcher</span></h1>

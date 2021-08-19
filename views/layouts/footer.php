@@ -5,7 +5,7 @@
             <ul class="info">
                 <li class="single-contact" data-aos="zoom-in-right">
                     <div class="contact-icon phone"></div>
-                    <a href="tel:+375447883083">+375 (44) 788-30-83</a>
+                    <a href="tel:+375293551000">+375 29 355 1000</a>
                 </li>
                 <li class="single-contact" data-aos="zoom-in-right">
                     <div class="contact-icon email"></div>
@@ -13,7 +13,7 @@
                 </li>
                 <li class="single-contact" data-aos="zoom-in-right">
                     <div class="contact-icon time"></div>
-                    <p>Ежедневно 24/7</p>
+                    <p>Режим работы  09:00 - 21:00</p>
                 </li>
                 <li class="single-contact" data-aos="zoom-in-right">
                     <div class="contact-icon placemark"></div>
@@ -48,16 +48,17 @@
                 <div class="single-block">
                     <div class="block-header">Телефон</div>
                     <div class="block-content">
-                        <a href="tel:+375447883083" class="pb-1">+375 (44) 788-30-83</a>
-                        <a href="tg:+375447883083" class="contact-with-icon"><img src="/template/img/telegram.svg"> Связь с нами в Telegram</a>
-                        <a href="viber://chat?number=375447883083" class="contact-with-icon"><img src="/template/img/viber.svg"> Связь с нами в Viber</a>
+                        <a href="tel:+375293551000" class="pb-1">+375 29 355 1000</a>
+                        <a href="tg:+375293551000" class="contact-with-icon"><img src="/template/img/telegram.svg"> Связь с нами в Telegram</a>
+                        <a href="viber://chat?number=375293551000" class="contact-with-icon"><img src="/template/img/viber.svg"> Связь с нами в Viber</a>
                     </div>
                 </div>
                 <div class="single-block">
                     <div class="block-header">Адрес</div>
                     <div class="block-content">
                         Беларусь, Минск, улица Тимирязева 46/10<br/><br/>
-                        Ежедневно 24/7
+                        Режим работы  09:00 - 21:00<br/>
+                        Прием заявок круглосуточно
                     </div>
                 </div>
                 <div class="single-block">
@@ -83,8 +84,8 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js" integrity="sha512-d4KkQohk+HswGs6A1d6Gak6Bb9rMWtxjOa0IiY49Q3TeFd5xAzjWXDCBW9RS7m86FQ4RzM2BdHmdJnnKRYknxw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script type="text/javascript" src="/template/js/main.js"></script>
-    <script type="text/javascript" src="/template/js/slider.js"></script>
+    <script type="text/javascript" src="/template/js/main.js?v=1.0"></script>
+    <script type="text/javascript" src="/template/js/slider.js?v=1.0"></script>
 </body>
 
 </html>
