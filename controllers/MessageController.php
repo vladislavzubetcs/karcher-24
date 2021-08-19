@@ -6,7 +6,7 @@ class MessageController
     {
         $result = false;
 
-        if(isset($_POST) && !empty($_POST) && isset($_POST['name']) && isset($_POST['tel']))
+        if(isset($_POST) && !empty($_POST) && isset($_POST['name']) && isset($_POST['tel']) && isset($_POST['accept']) && $_POST['accept'])
             $result = Message::contactUs($_POST['name'], $_POST['tel']);
 
         if($result)
